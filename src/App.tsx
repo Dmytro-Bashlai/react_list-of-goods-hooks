@@ -63,7 +63,7 @@ export const App = () => {
   const [reversed, setReversed] = useState(false);
   const preparedGoods = prepareGoods(goodsFromServer, { sortField, reversed });
 
-  const getReset = () => {
+  const handleReset = () => {
     setSortField('');
     setReversed(false);
   };
@@ -105,7 +105,7 @@ export const App = () => {
             className={classNames('button is-danger', {
               'is-light': sortField !== '' || reversed,
             })}
-            onClick={getReset}
+            onClick={handleReset}
           >
             Reset
           </button>
